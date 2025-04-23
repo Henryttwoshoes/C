@@ -1,0 +1,8 @@
+1- Leia um numero positivo do usário, então, calcule e imprima a sequencia Fibonacci até o primeiro numero superior ao número lido. Exemplo: se o usuário informou o número 30, a sequencia a ser impressa será 0 1 1 2 3 5 8 13 21 34. 
+
+2- Faça um algoritmo que converta uma velocidade expressa em km/h para m/s e vice versa. Voce deve criar um menu com as duas opcões de conversão e com uma opção para finalizar o programa. O usuario poderá fazer quantas conversões desejar, sendo que o programa só será finalizado quando a opção de finalizar for escolhida.
+
+3- Faça um programa que leia um conjunto não determinado de valores, um de cada vez, e escreva para cada um dos valores lidos, o quadrado, o cubo e a raiz quadrada. Finalize a entrada de dados com um valor negativo ou zero.
+
+4- Chico tem 1.50 metro e cresce 2 centímetros por ano, enquanto Zé tem 1.10 metros e cresce 3 centímetros por ano. Escreva um programa que calcule e imprima quantos anos serao necessários para que Zé seja maior que Chico.
+
