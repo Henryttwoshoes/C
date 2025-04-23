@@ -1,0 +1,15 @@
+Todo programa em C tem a seguinte estrutura:
+----------------------------------------------------------------------------------------------------
+int main(){
+
+
+
+
+
+
+    return 0;
+}
+----------------------------------------------------------------------------------------------------
+
+
+---> Ocasionalmente possui o comando system ("pause"); antes de fechar as {} do int main()

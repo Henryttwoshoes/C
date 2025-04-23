@@ -6,7 +6,7 @@ int main(){
 	float ms = 0;
 	int opcao;
 	while (opcao !=3){
-		printf("Escolha uma opção: \n 1- converter para km/h em m/s \n 2- converter m/s em km/h \n 3- finalizar o programa");
+		printf("Escolha uma opcao: \n 1- converter para km/h em m/s \n 2- converter m/s em km/h \n 3- finalizar o programa");
 		scanf("%d", &opcao);
 	
 		switch(opcao){
