@@ -1,0 +1,17 @@
+1 - Faça um programa que apresente um menu de opções para o cálculo das seguintes operações entre dois números:
+• adição (opção 1);
+• subtração (opção 2);
+• multiplicação (opção 3);
+• divisão (opção 4);
+• saída (opção 5);
+O programa deve possibilitar ao usuario a escolha da operação desejada, a exibição do resultado e a volta ao menu de opções. O programa só termina quando for escolhida a opção de saída (opção 5).
+
+2 - Escreva um programa que escreva na tela, de 1 ate 100, de 1 em 1, 3 vezes. A primeira vez deve usar a estrutura de repetição for, a segunda while, e a terceira do while.
+
+3 - Faça um programa que leia varios números, calcule e mostre: 
+(a) A soma dos números digitados;
+(b) A quantidade de números digitados;
+(c) A media dos números digitados;
+(d) O maior numero digitado;
+(e) O menor numero digitado;
+Finalize a entrada de dados caso o usuario informe o valor 0.
