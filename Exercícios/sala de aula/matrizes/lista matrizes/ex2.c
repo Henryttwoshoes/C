@@ -10,10 +10,10 @@
 
 int main(){
 
-	/*int bingo[5][5];
+	int bingo[5][5];
     int i,j;
     int duplicado;
-    int numero = 0;*/
+    int numero = 0;
 	
 
 
