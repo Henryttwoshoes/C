@@ -18,6 +18,6 @@ while (altZe < altC){
 	
 }
 
-	printf("\nDemorou-se %d anos para Ze alcançar a altura de Chico.", anos);
+	printf("\nDemorou-se %d anos para Ze alcanï¿½ar a altura de Chico.", anos);
 	return 0;
 }
