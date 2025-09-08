@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main(){
+/*int main(){
    int i,a;
    a=0;
    for (i=0;i<5;i++){
@@ -11,4 +11,19 @@ int main(){
   }
 printf("\nSaiu do laco for\n");
 return(0);
+}*/
+
+
+// teste inicial com funções em sala de aula
+int soma(int num1, int num2){
+    return(num1+num2);
+}
+
+
+int main(){
+    int a, b;
+    a=20;
+    b=30;
+    int resultado = soma(a,b);
+    printf("%d", resultado);
 }
