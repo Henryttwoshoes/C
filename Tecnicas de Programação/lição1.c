@@ -5,8 +5,8 @@ int main() {
 
     scanf("%d", &num);
 
-    seg = num;
-    min = (num / 60);
+    seg = num % 60;
+    min = (num % 3600) / 60;
     hora = (num / 3600);
     printf("Esse valor equivale a %d segundos, %d minutos e %d horas", seg, min, hora);
 
