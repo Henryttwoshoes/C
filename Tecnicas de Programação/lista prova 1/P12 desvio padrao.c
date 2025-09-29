@@ -6,12 +6,12 @@ float desvio_vetor(float vetor[4]);
 int main() {
     float vetor[4];
     int i=0;
-
+    // Escaneia os valores pra cada indice do array(de novo)
     for (i=0;i<4;i++){
     printf("Digite um valor do array: ");
     scanf("%f",&vetor[i]);
     }
-    
+    // Printa já chamando a função que faz o trabalho(de novo)
     printf("O desvio padrao do vetor apresentado eh: %.3f", desvio_vetor(vetor));
     
     return 0;

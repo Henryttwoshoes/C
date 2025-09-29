@@ -2,7 +2,7 @@
  
 int main() {
     int playerone, playertwo;
-
+    // Mensagens iniciais do jogo
     printf("Escolha entre \n 1 - pedra \n 2 - tesoura \n 3 - papel \n");
     printf("Escolha do playerone: \n");
     scanf("%d", &playerone);
@@ -10,8 +10,8 @@ int main() {
     scanf("%d", &playertwo);
 
     
-
-    if (playerone == playertwo){
+    // Condições pra cada possibilidade do jogo
+    if (playerone == playertwo){ // Empate
         printf("Empate.\n");
     }
     else if (playerone == 1 && playertwo == 3) // vitória do papel player 2

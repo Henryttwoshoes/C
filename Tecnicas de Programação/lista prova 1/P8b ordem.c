@@ -3,7 +3,7 @@
 int main() {
     int a,b,c;
     //int menor,medio,maior;
-    
+    // Escaneia os números
     printf("Digite o numero a: ");
     scanf("%d", &a);
     printf("Digite o numero b: ");
