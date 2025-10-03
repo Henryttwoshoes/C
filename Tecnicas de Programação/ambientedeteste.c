@@ -15,7 +15,7 @@ return(0);
 
 
 // teste inicial com funções em sala de aula
-int soma(int num1, int num2){
+/*int soma(int num1, int num2){
     return(num1+num2);
 }
 
@@ -26,4 +26,26 @@ int main(){
     b=30;
     int resultado = soma(a,b);
     printf("%d", resultado);
+}
+*/
+
+void duplica(int *a);
+    
+
+
+
+int main(){
+    int a;
+
+    printf("Digite o numero a: ");
+    scanf("%d", &a);
+
+    duplica(&a);
+
+    printf("O dobro de a eh: %d", a);
+
+}
+
+void duplica(int *a){
+    *a = 2*(*a);
 }
