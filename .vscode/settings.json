@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "p4 juros compostos": "c"
+        "p4 juros compostos": "c",
+        "limits": "c"
     }
 }

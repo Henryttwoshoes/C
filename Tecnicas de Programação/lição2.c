@@ -10,7 +10,7 @@ int main(){
    printf("Quantas vezes: ");
    scanf("%d", &vzs);
 
-   for(i=0;i<vzs;i++){
+   for(i=1;i<vzs;i++){
     resultado = resultado + n;
     printf("%d\n", resultado);
    }
