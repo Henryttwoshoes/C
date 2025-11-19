@@ -1,6 +1,6 @@
 #include <stdio.h>					
 
-typedef struct data {   
+typedef struct notas {   
     int dia;
     int mes;
     int ano;
