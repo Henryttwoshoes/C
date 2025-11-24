@@ -1,11 +1,14 @@
 #include <stdio.h>
 
-void buscar_num(int valores[5], int busca);
+int buscar_num(int valores[], int busca, int achados[]);
 
 
 int main(){
 int valores[5];
 int i, busca;
+int achados[5];
+int j;
+int k=0;
 
     // Escaneia os valores
     for (i = 0; i < 5; i++) {
@@ -19,7 +22,16 @@ int i, busca;
     scanf("%d", &busca);
 
     // Salva o indice(resultado da função) em uma variável para checar no if adiante
-    buscar_num(valores, busca);
+    while(k<5){
+        
+        achados[k]= buscar_num(valores, busca, achados);
+        k++;
+    }
+
+    printf("O numero %d encontra-se no(s) indice(s): ", busca);
+    for(j=0;j<5;j++){
+        printf("%d ", achados[j]);
+    }
 
 
 return(0);
@@ -28,8 +40,7 @@ return(0);
 
 // Função que imprime todos os índices onde o valor aparece
 
-// A função aqui é void pois não precisa retornar nenhum valor para a main, apenas imprime os índices onde o número buscado aparece no vetor.
-void buscar_num(int valores[5], int busca) {
+int buscar_num(int valores[], int busca, int achados[]) {
     int encontrou = 0;
 
     // Primeiro laço for para ver se o valor existe no array
@@ -40,16 +51,16 @@ void buscar_num(int valores[5], int busca) {
     }
     // Se a variável de controle for 1, faz-se um outro laço for da mesma estrutura mas desta vez ele imprime os valores na mensagem que indica em quais índices eles se encontram.
     if (encontrou == 1){
-    printf("O numero %d encontra-se no(s) indice(s): ", busca);
     for (int j = 0; j < 5; j++) {
         if (valores[j] == busca) {
-            printf("%d ", j);
+            return j;
         }
     }
     }
 
     // Condição para caso o valor não esteja no array.
     else if (!encontrou) {
-        printf("O numero %d nao esta presente no vetor.", busca);
+        return -1;
 }
+
 }

@@ -11,7 +11,7 @@ int i, busca, indice;
     for (i = 0; i < 5; i++) {
         // Variável de controle para saber se o número foi repetido ou não
         int valido = 0;
-    while (!valido) {
+    while (!valido) { // Enquanto for inverso de valido(1)
         printf("Digite um valor do array (sem repetir): ");
         scanf("%d", &valores[i]);
         valido = 1;
@@ -47,7 +47,7 @@ return(0);
 
 
 // Função que faz a busca do valor
-int buscar_num(int valores[5], int busca) {
+int buscar_num(int valores[], int busca) { // não precisa colocar o numero do tamanho do vetor
     int j;
     for (j = 0; j < 5; j++) {
         if (busca == valores[j]) {
