@@ -45,13 +45,16 @@ int main() {
             break;
         }  
         
-        if (v != NULL) {
+        if (v == NULL) {
         for (i = 0; i < n; i++) {
             printf("\nValor de [%d] = %d", i, v[i]);
         }
-    }
+    
 
-
+    // if (v == NULL) {
+    //      for (i = 0; i < n; i++) {
+    //          printf("\nValor de [%d] = %d", i, v[i]);
+    //      }
 
    return 0;
 
