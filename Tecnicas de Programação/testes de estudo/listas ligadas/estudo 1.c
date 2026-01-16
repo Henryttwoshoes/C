@@ -11,6 +11,16 @@ typedef struct no
 }No;
 // ---------------------
 
+typedef struct No * p_no;
+
+
+
+
+p_no criar_lista(){
+    return NULL;
+}
+
+
 
 // Procedimento para inserir no início
 void inserir_no_inicio(No **lista, int num){
@@ -94,6 +104,22 @@ void imprimir(No *no){
     
 }
 
+void imprimirrec(No *no){
+
+        if (no != NULL){
+            printf("%d ", no->valor);
+            imprimirrec(no->proximo);
+    
+    }
+    
+}
+
+void destruir_lista(No *no){
+    if (no != NULL){
+        destruir_lista(no);
+        free(no);
+    }
+}
 
 int main(){
 
@@ -102,7 +128,7 @@ int main(){
 
 
     do{
-        printf("\n\t0 - Sair\n\t1 - Inserir no inicio\n\t2 - Inserir no Fim\n\t3 - Inserir no meio\n\t4 - Imprimir\n\t");
+        printf("\n\t0 - Sair\n\t1 - Inserir no inicio\n\t2 - Inserir no Fim\n\t3 - Inserir no meio\n\t4 - Imprimir\n\t5 - Destruir\n\t");
         scanf("%d", &opcao);
 
         switch(opcao){
@@ -126,8 +152,14 @@ int main(){
                 break;
             
             case 4:
-                imprimir(lista);
+                imprimirrec(lista);
+                printf("\nLista impressa recursivamente.");
                 break;
+
+                case 5:
+                    destruir_lista(lista);
+                    printf("\nLista destruída com sucesso.");
+                    break;
             default:
                 if(opcao != 0){
                     printf("Opcao invalida!\n");
