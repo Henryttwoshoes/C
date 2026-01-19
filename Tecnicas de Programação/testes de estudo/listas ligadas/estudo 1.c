@@ -24,12 +24,57 @@ p_no criar_lista(){
 
 // Procedimento para inserir no início
 void inserir_no_inicio(No **lista, int num){
+    /* Função recebe **lista, um ponteiro de ponteiro.
+    
+        Você quer mudar o valor do ponteiro lista da main.
+        Mas em C, parâmetros são passados por cópia
+
+        Então, para mudar um ponteiro externo, você precisa passar o endereço dele
+        Logo:
+            lista (na função) → é um ponteiro para ponteiro
+            *lista → é o ponteiro original da main
+    
+    */
+
+
     No *novo = malloc(sizeof(No));
+    /* *novo é um ponteiro para um nó recém-criado
+        ele ainda não está ligado à lista
+
+        novo ──▶ [No]
+        lista ──▶ (ainda aponta para o início antigo)
+        
+        */
 
     if (novo){
         novo->valor = num;
         novo->proximo = *lista;
+
+        /*
+        *lista é o antigo início da lista
+        Você faz o novo nó apontar para o antigo primeiro nó
+        
+        Antes:
+        lista ──▶ A ──▶ B ──▶ NULL
+
+        Depois dessa linha:
+        novo ──▶ A ──▶ B ──▶ NULL
+        lista ──▶ A ──▶ B ──▶ NULL
+        
+        */
+
+
         *lista = novo;
+        /*
+        Agora você diz:
+        “o início da lista passa a ser o novo nó”
+
+        Resultado final:
+        lista ──▶ novo ──▶ A ──▶ B ──▶ NULL
+        
+        */
+
+
     }else{
         printf("Erro ao alocar memoria!\n");
     }
@@ -39,7 +84,28 @@ void inserir_no_inicio(No **lista, int num){
 // Procedimento para inserir no final
 
 void inserir_no_fim(No **lista, int num){
+    /* Função recebe **lista, um ponteiro de ponteiro.
+    
+        Você quer mudar o valor do ponteiro lista da main.
+        Mas em C, parâmetros são passados por cópia
+
+        Então, para mudar um ponteiro externo, você precisa passar o endereço dele
+        Logo:
+            lista (na função) → é um ponteiro para ponteiro
+            *lista → é o ponteiro original da main
+    
+    */
+
+
     No *aux, *novo = malloc(sizeof(No));
+
+    /* *novo é um ponteiro para um nó recém-criado
+        ele ainda não está ligado à lista
+
+        novo ──▶ [No]
+        lista ──▶ (ainda aponta para o início antigo)
+        
+        */
 
     if (novo){
         novo->valor = num;
@@ -125,8 +191,13 @@ int main(){
 
     int opcao, valor, anterior;
     No *lista = NULL;
+    /*Lista = ponteiro para o INÍCIO da lista ligada("head")
+        Nunca é um nó, sempre aponta para um.
+        Começam como NULL pois começa VAZIA
 
+        lista ──▶ [No] ──▶ [No] ──▶ NULL
 
+*/
     do{
         printf("\n\t0 - Sair\n\t1 - Inserir no inicio\n\t2 - Inserir no Fim\n\t3 - Inserir no meio\n\t4 - Imprimir\n\t5 - Destruir\n\t");
         scanf("%d", &opcao);
@@ -152,7 +223,7 @@ int main(){
                 break;
             
             case 4:
-                imprimirrec(lista);
+                imprimirr(lista);
                 printf("\nLista impressa recursivamente.");
                 break;
 
